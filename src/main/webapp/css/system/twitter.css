@@ -1,0 +1,223 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: '微软雅黑 Light';
+}
+
+.hidden {
+    display: none;
+}
+
+#loader {
+    min-width: 1349px;
+    background-color: rgba(255, 255, 255, 1.00);
+    width: 100%;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.zhuye {
+    background-color: rgba(255, 255, 255, 1.00);
+    height: 46px;
+    width: 200px;
+    float: left;
+    margin-left: 80px;
+}
+
+.zhuye li {
+    background-color: rgba(255, 255, 255, 1.00);
+    float: left;
+    font-size: 14px;
+    height: 43px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.zhuye li a {
+    background-color: rgba(255, 255, 255, 1.00);
+    height: 46px;
+    line-height: 46px;
+    color: gray;
+    font-weight: bold;
+}
+
+.zhuye li img {
+    background-color: rgba(255, 255, 255, 1.00);
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+
+#body {
+    width: 1349px;
+    height: 690px;
+    border-color: blanchedalmond;
+    background-color: rgba(0, 0, 0, 1.00);
+}
+
+#tu {
+    width: 1349px;
+    height: 690px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#tu li {
+    width: 1349px;
+    height: 900px;
+}
+
+#tu li img {
+    width: 1349px;
+    height: 900px;
+}
+
+#xiangqing {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 450px;
+    left: 260px;
+    color: white;
+    font-size: 14px;
+    font-style: oblique;
+}
+
+#welcome {
+    width: 470px;
+    height: 300px;
+    position: absolute;
+    top: 110px;
+    left: 260px;
+    color: rgba(255, 255, 255, 1.00);
+    font-family: '微软雅黑 Light';
+    z-index: 1;
+}
+
+h1 {
+    font-size: 38px;
+    padding-bottom: 30px;
+}
+
+.link {
+    font-size: 21px;
+}
+
+#login {
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    top: 130px;
+    left: 789px;
+    background-color: rgba(255, 255, 255, 1.00);
+    border-radius: 5px;
+    box-shadow: 0 0 2px white;
+}
+
+#rigest {
+    width: 300px;
+    height: 210px;
+    position: absolute;
+    top: 260px;
+    left: 789px;
+    background-color: rgba(255, 255, 255, 1.00);
+    border-radius: 5px;
+    box-shadow: 0 0 2px white;
+}
+
+.txt {
+    width: 280px;
+    height: 28px;
+    margin: 10px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 15px;
+    color: lightslategray;
+    padding: 0 5px;
+}
+
+.btn {
+    width: 65px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(29, 161, 241, 1.00);
+    color: rgba(255, 255, 255, 1.00);
+    cursor: pointer;
+    box-shadow: 0 1px 0 #fff;
+}
+
+.cb {
+    margin-left: 9px;
+}
+
+.newcomer {
+    width: 290px;
+    height: 35px;
+    line-height: 30px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(233, 233, 233, 1.00);
+    margin: 8px 0;
+}
+
+#lianjie {
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    top: 680px;
+    left: 350px;
+    z-index: 1;
+}
+
+#lianjie li {
+    height: 50px;
+    float: left;
+    margin-left: 5px;
+}
+
+#lianjie li a {
+    color: rgba(255, 255, 255, 1.00);
+    font-size: 12px;
+}
+
+.search {
+    width: 210px;
+    height: 30px;
+    position: relative;
+    top: 7px;
+    left: 640px;
+    border: 1px solid rgba(203, 203, 203, 1.00);
+    border-radius: 25px;
+    background-color: rgba(245, 248, 250, 1.00);
+    padding-right: 30px;
+    padding-left: 15px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.sea {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    left: 840px;
+    top: 15px;
+}

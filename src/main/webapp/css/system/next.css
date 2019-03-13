@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: '微软雅黑 Light';
+}
+
+body {
+    min-height: 647px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#header {
+    min-width: 1349px;
+    width: 100%;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(img/lohp_streams_header_bg_v4.png);
+    background-size: 1449px 46px;
+    z-index: 99;
+    box-shadow: 0 0 5px #ccc;
+}
+
+#header img {
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 8px;
+    left: 650px;
+    float: left;
+    cursor: pointer;
+}
+
+#body {
+    width: 830px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    top: 160px;
+    left: 320px;
+}
+
+.xuan {
+    color: #2A2A2A;
+    position: relative;
+    top: 0px;
+    left: 160px;
+    font-size: 25px;
+}
+
+.fangxin {
+    color: #666;
+    position: relative;
+    top: 20px;
+    left: 160px;
+    font-size: 20px;
+}
+
+#txt {
+    position: relative;
+    top: 40px;
+    left: 160px;
+    width: 380px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    color: gray;
+    font-size: 20px;
+}
+
+.check {
+    position: relative;
+    top: 35px;
+    left: 170px;
+}
+
+.yuan {
+    position: relative;
+    top: 20px;
+    left: 330px;
+    width: 200px;
+    height: 200px;
+    display: none;
+}

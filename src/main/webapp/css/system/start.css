@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "microsoft yahei";
+}
+
+body {
+    width: 1349px;
+    min-height: 630px;
+    background-color: rgba(230, 236, 240, 1.00);
+    height: auto;
+    font-family: "microsoft yahei";
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#header {
+    min-width: 1349px;
+    width: 100%;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: 1349px 46px;
+    z-index: 99;
+    border-bottom: 1px solid gainsboro;
+    background-color: white;
+}
+
+#header img {
+    height: 25px;
+    width: 26px;
+    position: relative;
+    top: 12px;
+    left: 650px;
+    float: left;
+    cursor: pointer;
+}
+
+#first {
+    width: 500px;
+    height: auto;
+    float: left;
+    margin-left: 70px;
+}
+
+#second {
+    width: 500px;
+    height: auto;
+    margin-left: 490px;
+}
+
+#second ul li {
+    margin-top: 20px;
+    display: none;
+}
+
+#second ul li img {
+    border-radius: 5px;
+}
+
+#body {
+    margin-top: 60px;
+    float: left;
+}
+
+#bodytwo {
+    width: 1050px;
+    height: 700px;
+    background-color: white;
+    margin-left: 150px;
+    border-radius: 5px;
+}
+
+.yuan {
+    width: 97%;
+    text-align: center;
+    display: none;
+}
+
+.yuan img {
+    margin-top: 180px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,709 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "microsoft yahei";
+}
+
+body {
+    width: 1349px;
+    background-color: rgba(230, 236, 240, 1.00);
+    min-height: 650px;
+    height: 680px;
+}
+
+#loader {
+    background-color: rgba(255, 255, 255, 1.00);
+    width: 100%;
+    min-width: 1349px;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    box-shadow: 0 0 5px #657786;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#logo {
+    background-color: rgba(255, 255, 255, 1.00);
+    height: 23px;
+    width: 23px;
+    position: fixed;
+    top: 12px;
+    left: 650px;
+    cursor: pointer;
+}
+
+.search {
+    width: 220px;
+    height: 30px;
+    border: 1px solid rgba(203, 203, 203, 1.00);
+    border-radius: 25px;
+    background-color: rgba(245, 248, 250, 1.00);
+    padding-right: 30px;
+    padding-left: 15px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+#search {
+    width: 300px;
+    height: 30px;
+    margin-left: 870px;
+    margin-top: -45px;
+}
+
+.sea {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    top: 7px;
+    left: 210px;
+    background-color: rgba(245, 248, 250, 1.00);
+}
+
+#daohang {
+    width: 300px;
+    height: 38px;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+#daohang li {
+    float: left;
+    width: 80px;
+    height: 42px;
+    padding: 0 15px;
+    line-height: 43px;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgba(102, 107, 117, 1.00);
+}
+
+.bian {
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+
+#touxiang {
+    border-radius: 25px;
+    position: absolute;
+    right: 193px;
+    top: 7px;
+}
+
+.button {
+    position: absolute;
+    right: 90px;
+    top: 7px;
+    width: 81px;
+    height: 32px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #ccc;
+    right: 90px;
+    top: 7px;
+    top: 7px;
+}
+
+.fa {
+    font-size: 15px;
+    position: relative;
+    top: -6px;
+    left: -2px;
+}
+
+.edit {
+    font-size: 23px;
+    position: relative;
+    top: -1px;
+    left: -4px;
+}
+
+#listlist {
+    width: 180px;
+    height: 360px;
+    position: fixed;
+    top: 51px;
+    right: 185px;
+    border-radius: 3px;
+    box-shadow: 0 0 2.5px lightslategray;
+    z-index: auto;
+    background-color: white;
+}
+
+#list {
+    display: none;
+    width: 120px;
+    height: 270px;
+    z-index: auto;
+}
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    z-index: 10;
+}
+
+.xia {
+    border: 4px solid transparent;
+    border-top-color: aliceblue;
+    border-bottom-width: 0;
+}
+
+.shang {
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    border-top-width: 0;
+    filter: drop-shadow(.5px -.5px .5px lightslategray);
+}
+
+.ss {
+    position: fixed;
+    top: 41px;
+    right: 200px;
+    z-index: 6;
+}
+
+#body {
+    width: 1180px;
+    height: auto;
+    margin: 60px 80px 40px;
+    float: left;
+}
+
+#second {
+    width: 590px;
+    height: auto;
+    position: absolute;
+    left: 380px;
+}
+
+#content {
+    width: 590px;
+    height: atuo;
+    position: absolute;
+    top: -290px;
+}
+
+#third {
+    width: 240px;
+    height: auto;
+    position: absolute;
+    left: 980px;
+}
+
+#tuijian {
+    width: 280px;
+    height: 280px;
+    background-color: white;
+    box-shadow: 0 0 0.5px #e6ecf0;
+    margin-left: 10px;
+}
+
+#link {
+    width: 280px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: -280px;
+    box-shadow: 0 0 0.5px #e6ecf0;
+}
+
+#lianjie {
+    width: 270px;
+    height: 60px;
+    margin: 20px 10px;
+    float: left;
+}
+
+#lianjie li {
+    float: left;
+    margin-right: 9px;
+    font-size: 13px;
+    color: #657786;
+    cursor: pointer;
+    height: 20px;
+}
+
+.listd {
+    padding: 4px 0 3px 20px;
+    font-size: 15px;
+    color: black;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+hr {
+    margin: 5px 0;
+}
+
+.touxiang {
+    width: 32px;
+    height: 32px;
+    border: 1px solid white;
+    background-size: 31px 31px;
+    cursor: pointer;
+}
+
+#user_tou {
+    border-radius: 5px;
+    position: relative;
+    top: 12px;
+    left: 25px;
+}
+
+.tweet {
+    width: 500px;
+    height: auto;
+    float: left;
+    position: relative;
+    top: -20px;
+    left: 70px;
+}
+
+.wen {
+    width: 480px;
+    border-radius: 5px;
+    border: 0px solid gray;
+    z-index: 8;
+    margin: 10px 0 10px 10px;
+}
+
+textarea {
+    resize: none;
+    overflow-y: auto;
+    width: 100%;
+    min-height: 80px;
+    border-style: hidden;
+}
+
+.thing {
+    width: 300px;
+    height: 30px;
+    position: relative;
+    top: -60px;
+    left: 70px;
+    z-index: 7;
+}
+
+.addThing {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 2px;
+    position: relative;
+    top: 50px;
+}
+
+.but {
+    width: 80px;
+    height: 40px;
+    position: relative;
+    left: 235px;
+    top: 45px;
+}
+
+.zishu {
+    position: relative;
+    left: 445px;
+    top: 2px;
+    color: #657786;
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+    font-style: oblique;
+}
+
+.zishu_lu {
+    position: relative;
+    left: 455px;
+    top: 55px;
+    color: #657786;
+}
+
+.but_lu {
+    position: relative;
+    left: 290px;
+    top: 80px;
+}
+
+.add {
+    position: relative;
+    top: -40px;
+    left: 25px;
+}
+
+.addx {
+    position: relative;
+    top: 90px;
+}
+
+.guanzhu {
+    font-size: 20px;
+    color: gray;
+    position: absolute;
+    top: 70px;
+    left: 105px;
+}
+
+.guanzhu_info {
+    width: 240px;
+    height: 205px;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+}
+
+.tuijian_info {
+    width: 240px;
+    height: 60px;
+    padding-left: 20px;
+    z-index: 8;
+    padding-left: 20px;
+}
+
+.tuijian_touxiang {
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+    background-color: white;
+    float: left;
+    border-radius: 3px;
+}
+
+.tuijian_name {
+    float: left;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    height: 20px;
+    max-width: 70px;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-left: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.tuijian_aite {
+    float: left;
+    font-size: 14px;
+    margin-left: 5px;
+    color: gray;
+    height: 20px;
+    width: auto;
+    max-width: 75px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.guanzhu_btn {
+    position: relative;
+    top: 3px;
+    left: 0px;
+    width: 81px;
+    height: 32px;
+}
+
+#back {
+    width: 590px;
+    height: 60px;
+    display: none;
+    background-color: white;
+    box-shadow: 0 0 .5px #e6ecf0;
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+#back img {
+    margin-left: 276px;
+    margin-top: 20px;
+    width: 24px;
+    height: 24px;
+    width: 24px;
+}
+
+.tweet {
+    height: auto;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.ttt {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    width: 560px;
+    color: powderblue;
+}
+
+#mask_shadow {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    z-index: 98;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+#popup {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 99;
+    top: 80px;
+    width: 600px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#popup .title {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    cursor: move;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: -10px;
+}
+
+#popup .title p {
+    padding-left: 14px;
+    line-height: 55px;
+    color: gray;
+    text-align: center;
+    font-size: 17px;
+}
+
+#popup .title span {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    color: #000;
+    opacity: .2;
+    font-size: 21px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#popup .title span:hover {
+    opacity: .8;
+}
+
+#popup .cont {
+    width: 100%;
+    height: auto;
+    background-color: rgba(232, 245, 253, 1);
+    border-radius: 0 0 5px 5px;
+    min-height: 210px;
+}
+
+#jiazai {
+    width: 590px;
+    height: 40px;
+    background-color: white;
+    line-height: 40px;
+    font-size: 15px;
+    color: black;
+    display: none;
+    box-shadow: 0 0 0.5px #e6ecf0;
+    margin-top: -9px;
+}
+
+#jiazai img {
+    margin-left: 28px;
+    display: none;
+    margin-top: 10px;
+}
+
+  
+  .guanzhuta {
+      width: 100px;
+      height: 25px;
+      border-radius: 5px;
+      background-color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 999;
+  }
+
+#souxianshi {
+    width: 330px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 1.5px #657786;
+    position: fixed;
+    top: 49px;
+    left: 885px;
+    border-radius: 3px;
+    display: none;
+}
+
+#souxianshishang {
+    position: fixed;
+    left: 905px;
+    z-index: 999999;
+    margin-top: 1px;
+    display: none;
+}
+
+.souneirong {
+    width: 330px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 330px;
+}
+
+.soumingzi {
+    float: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    margin-left: 10px;
+    min-width: 35px;
+    max-width: 200px;
+    margin-right: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.soutouxiang {
+    float: left;
+}
+
+.soutouxiang img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.sousouaite {
+    height: 50px;
+    min-width: 50px;
+    max-width: 200px;
+    font-size: 14px;
+    color: rgb(101, 119, 134);
+    margin-left: 5px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tishidian {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    top: 12px;
+    margin-left: -10px;
+    display: none;
+}
+
+  
+  #quanbu {
+      width: 590px;
+      height: 50px;
+      background-color: white
+  }
+
+#quanbu li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.notifications {
+    width: 590px;
+    height: auto;
+    background-color: white;
+    margin-top: 1px;
+    font-size: 16px;
+}
+
+.dianzantweet {
+    width: 480px;
+    height: auto;
+    border: 1px solid rgb(228, 232, 245);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dianzantweetname {
+    max-width: 480px;
+    height: 20px;
+    cursor: pointer;
+    float: left;
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.dianzantweetaite {
+    margin-top: 10px;
+    color: #657786;
+    max-width: 480px;
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dianzantweetneirong {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    cursor: pointer;
+    max-width: 460px;
+    color: black;
+    word-wrap: break-word;
+    word-break: break-all;
+}

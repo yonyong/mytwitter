@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+
+body {
+    background-color: gainsboro;
+}
+
+#loader {
+    width: 1370px;
+    height: 50px;
+    background-color: royalblue;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    box-shadow: 0 0 5px gray;
+}
+
+#loadetial {
+    position: absolute;
+    left: 1155px;
+    top: 0px;
+    height: 50px;
+}
+
+#loadetial ul li {
+    float: left;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.down {
+    font-size: 10px;
+    position: relative;
+    top: 0px;
+    margin-left: 2px;
+}
+
+#exit {
+    width: 90px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    box-shadow: 0 0 1px gray;
+    text-align: center;
+    border-radius: 0 0 1px 1px;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#cebian {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    background-color: #293038;
+    z-index: 8;
+    box-shadow: 0 0 1px whitesmoke;
+}
+
+#body {
+    margin-left: 150px;
+}
+
+.daohangdai {
+    height: 30px;
+    width: 100%;
+    background-color: darkslategray;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #394555;
+    color: white;
+}
+
+#list {
+    width: 100%;
+    height: 300px;
+    color: white;
+}
+
+#list ul li {
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+    padding: 10px 20px 30px 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.glyphicon-user {
+    font-size: 14px;
+}
+
+.tubiao {
+    padding-right: 20px;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 680px;
+    cursor: pointer;
+}
+
+.counter {
+    color: white;
+    margin-left: -20px;
+}
+
+#color {
+    width: 75px;
+    height: 120px;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    box-shadow: 0 0 1px gray;
+    display: none;
+}
+
+.colornext {
+    width: 75px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
