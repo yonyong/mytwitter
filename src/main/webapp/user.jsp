@@ -114,7 +114,9 @@
 		<div id="fenye"
 			style="width:1190px;text-align: center;position: absoult;bottom: 30px">
 			<ul class="pagination">
+				<%--如果当前页小于等于6--%>
 				<c:if test="${map.page<=6 }" var="f">
+					<%--如果总页数大于10则显示10个页数按钮，否则显示总页数个按钮--%>
 					<c:forEach begin="1"
 						end="${map.pageCount>10 ? 10 : map.pageCount }" var="i">
 						<c:if test="${map.page==i }">
@@ -125,6 +127,7 @@
 						</c:if>
 					</c:forEach>
 				</c:if>
+				<%--如果当前页大于6，当前页按钮居中显示--%>
 				<c:if test="${not f }">
 					<c:forEach begin="${map.page-5 }"
 						end="${map.page+4 > map.pageCount ? map.pageCount : map.page+4 }"

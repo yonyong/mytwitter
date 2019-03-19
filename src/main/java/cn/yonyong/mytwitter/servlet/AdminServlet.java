@@ -38,7 +38,7 @@ public class AdminServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		String method = request.getParameter("method");
-		if ("checklogin".equals(method)) {		//检查登陆
+		if ("checklogin".equals(method)) {		//验证登陆
 			doCheck(request, response);
 		}
 
@@ -46,19 +46,19 @@ public class AdminServlet extends HttpServlet {
 			toExit(request, response);
 		}
 
-		if ("catnum".equals(method)) {		//统计数量
+		if ("catnum".equals(method)) {		//统计后台主页所需数量
 			toCatNum(request, response);
 		}
-		if ("getinfo".equals(method)) {		//获取信息
+		if ("getinfo".equals(method)) {		//用户中心
 			toGetInfo(request, response);
 		}
-		if ("gettweet".equals(method)) {		//获取推文信息
+		if ("gettweet".equals(method)) {		//推文中心
 			toGetTweet(request, response);
 		}
 		if ("deltweet".equals(method)) {		//删除推文
 			toDelTweet(request, response);
 		}
-		if ("updatestate".equals(method)) {		//更新状态
+		if ("updatestate".equals(method)) {		//停封用户
 			toUpdateState(request, response);
 		}
 	}
@@ -125,6 +125,13 @@ public class AdminServlet extends HttpServlet {
 		request.getRequestDispatcher("tweet.jsp").forward(request, response);
 	}
 
+	/**
+	 * 自定义分页查询所有用户
+	 * @param request
+	 * @param response
+	 * @throws IOException
+	 * @throws ServletException
+	 */
 	private void toGetInfo(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		int page = 1;
@@ -173,6 +180,12 @@ public class AdminServlet extends HttpServlet {
 		request.getRequestDispatcher("user.jsp").forward(request, response);
 	}
 
+	/**
+	 * 获取后台所需数据，在线人数，今日访问量，推文数，总人数
+	 * @param request
+	 * @param response
+	 * @throws IOException
+	 */
 	private void toCatNum(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		ServletContext application = request.getSession().getServletContext();
 		Integer onlineNum = (Integer) application.getAttribute("onlineNum");
@@ -210,12 +223,12 @@ public class AdminServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		Admins admin = adminsDao.checkLogin(username, password);
 
-		if (admin == null) {
+		if (admin == null) {		//登陆失败，重定向回登陆页
 			response.sendRedirect("backend.jsp");
 			return;
 		}
 
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession();		//登陆成功
 		session.setAttribute("admin", admin);
 
 		doAddLogin(request, response);
@@ -223,21 +236,26 @@ public class AdminServlet extends HttpServlet {
 
 	private void doAddLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession session = request.getSession();
+		//判断用户是否处于登录状态
 		Admins admin = (Admins) session.getAttribute("admin");
 		if (admin == null) {
 			response.sendRedirect("backend.jsp");
 			return;
 		}
+		//添加管理员登陆后台系统记录
 		int aid = admin.getAid();
 		Timestamp aditime = Times.getSystemTime();
 		int m = adloginDao.addUp(aid, aditime);
+
 		if (m > 0) {
+			//记录是否已添加
 			Adlogin adlogin = adloginDao.selSignal(aid, aditime);
 			if (adlogin == null) {
 				response.sendRedirect("backend.jsp");
 				return;
 			}
 			int adid = adlogin.getAdid();
+			//设置管理员登录状态为已登录--1
 			adminsDao.updateOnline(1, aid);
 			session.setAttribute("adid", adid);
 			response.sendRedirect("page.jsp");

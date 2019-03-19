@@ -60,7 +60,7 @@
 	<div id="body">
 		<div
 			style="font-size: 35px;color:#ccc;text-align: center;width: 1100px;line-height: 140px;">
-			To Be or Not To Be,<br> It Is A Question.
+			有道无术，术尚可求<br> 有术无道，止于术
 		</div>
 	</div>
 </body>
