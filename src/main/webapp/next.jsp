@@ -2,6 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Bootstrap 3.3.7 -->
 <title>请选择一个用户名</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="img/index.ico" />
