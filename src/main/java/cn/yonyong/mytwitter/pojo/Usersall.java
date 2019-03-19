@@ -1,7 +1,12 @@
 package cn.yonyong.mytwitter.pojo;
 
 import java.sql.Timestamp;
-
+/**
+ * create by: yonyong
+ * description: TODO
+ * create time: 2019/3/18 16:29
+ *
+ */
 public class Usersall {
 	private int uid;
 	private String uname;

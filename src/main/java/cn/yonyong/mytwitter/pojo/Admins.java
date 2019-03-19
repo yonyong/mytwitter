@@ -2,12 +2,18 @@ package cn.yonyong.mytwitter.pojo;
 
 import java.sql.Timestamp;
 
+/**
+ * create by: yonyong
+ * description: 管理员实体类
+ * create time: 2019/3/18 16:17
+ *
+ */
 public class Admins {
-	private int aid;
-	private String aname;
-	private String apwd;
-	private Timestamp atime;
-	private int astate;
+	private int aid;		//管理员id
+	private String aname;		//管理员昵称
+	private String apwd;		//管理员密码
+	private Timestamp atime;		//管理员创建时间
+	private int astate;		// TODO
 	private int apower;
 
 	public int getAid() {

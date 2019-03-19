@@ -1,5 +1,10 @@
 package cn.yonyong.mytwitter.pojo;
-
+/**
+ * create by: yonyong
+ * description: TODO
+ * create time: 2019/3/18 16:20
+ *
+ */
 public class Concern {
 	private int cid;
 	private int f_uid;

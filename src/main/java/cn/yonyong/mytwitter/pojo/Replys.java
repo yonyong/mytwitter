@@ -1,13 +1,18 @@
 package cn.yonyong.mytwitter.pojo;
 
 import java.sql.Timestamp;
-
+/**
+ * create by: yonyong
+ * description: 评论/回复操作实体类
+ * create time: 2019/3/18 16:26
+ *
+ */
 public class Replys {
-	private int rid;
-	private int uid;
-	private int tid;
-	private String rcontent;
-	private Timestamp rtime;
+	private int rid;		//评论记录id
+	private int uid;		//评论者userid
+	private int tid;		//评论的推文id
+	private String rcontent;		//评论的内容
+	private Timestamp rtime;		//评论的时间
 
 	public int getRid() {
 		return rid;

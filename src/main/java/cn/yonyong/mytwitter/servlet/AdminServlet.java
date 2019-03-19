@@ -18,7 +18,10 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * Servlet implementation class AdminServlet
+ * create by: yonyong
+ * description: TODO
+ * create time: 2019/3/18 17:21
+ *
  */
 @WebServlet("/admin.do")
 public class AdminServlet extends HttpServlet {
@@ -35,27 +38,27 @@ public class AdminServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		String method = request.getParameter("method");
-		if ("checklogin".equals(method)) {
+		if ("checklogin".equals(method)) {		//检查登陆
 			doCheck(request, response);
 		}
 
-		if ("exit".equals(method)) {
+		if ("exit".equals(method)) {		//退出
 			toExit(request, response);
 		}
 
-		if ("catnum".equals(method)) {
+		if ("catnum".equals(method)) {		//统计数量
 			toCatNum(request, response);
 		}
-		if ("getinfo".equals(method)) {
+		if ("getinfo".equals(method)) {		//获取信息
 			toGetInfo(request, response);
 		}
-		if ("gettweet".equals(method)) {
+		if ("gettweet".equals(method)) {		//获取推文信息
 			toGetTweet(request, response);
 		}
-		if ("deltweet".equals(method)) {
+		if ("deltweet".equals(method)) {		//删除推文
 			toDelTweet(request, response);
 		}
-		if ("updatestate".equals(method)) {
+		if ("updatestate".equals(method)) {		//更新状态
 			toUpdateState(request, response);
 		}
 	}
