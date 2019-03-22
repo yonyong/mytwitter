@@ -2,6 +2,7 @@ package cn.yonyong.mytwitter.servlet;
 
 import cn.yonyong.mytwitter.dao.*;
 import cn.yonyong.mytwitter.pojo.*;
+import cn.yonyong.mytwitter.util.Md5Util;
 import cn.yonyong.mytwitter.util.Times;
 
 import javax.servlet.ServletContext;
@@ -220,7 +221,7 @@ public class AdminServlet extends HttpServlet {
 
 	private void doCheck(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String password = Md5Util.getMd5(request.getParameter("password"));
 		Admins admin = adminsDao.checkLogin(username, password);
 
 		if (admin == null) {		//登陆失败，重定向回登陆页

@@ -42,9 +42,11 @@ public class SigninServlet extends HttpServlet {
 			return;
 		}
 
+		//更新用户在线状态 1为在线，0为下线
 		int uid = user.getUid();
 		int n = usersDao.updateOnline(1, uid);
 
+		//添加用户登入记录
 		Timestamp stime = Times.getSystemTime();
 		int m = signinDao.addUp(uid, stime);
 

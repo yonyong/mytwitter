@@ -285,6 +285,7 @@
 				<div id="pics" style="z-index:10000">
 					<img src="" /> <span class="btn btn-info" id="changepic">更换图片</span>
 				</div>
+				<%--如果不限制图像的格式，可以写为：accept="image/*"。--%>
 				<span id="picha" title="取消预览">&times;</span> <input type="file"
 					id="pic" accept="image/*" name="tpic" />
 			</form>

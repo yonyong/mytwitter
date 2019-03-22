@@ -31,4 +31,8 @@ public class Md5Util {
 			return null;
 		}
 	}
+
+	public static void main(String[] args) {
+		System.out.println(getMd5(String.valueOf(123456)));
+	}
 }

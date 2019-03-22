@@ -7,9 +7,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Tell the browser to be responsive to screen width -->
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.7 -->
 <title>后台主界面</title>
 <link rel="icon" href="img/index.ico" />
@@ -91,7 +88,7 @@
 						style="font-size: 20px;color: black;margin: 10px 0 20px 10px;width: 100%;height: 30px;font-weight: bold">在线人数：</div>
 				</div>
 				<span class="glyphicon glyphicon-eye-open"
-					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px"></span>
+					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px">
 				<span class="counter" style="font-size: 35px;">0</span>
 			</div>
 			<div class="kapian" style="background: #ea6f5a">
@@ -101,7 +98,7 @@
 						style="font-size: 20px;color: black;margin: 10px 0 20px 10px;font-weight: bold ">今日访问量：</div>
 				</div>
 				<span class="glyphicon glyphicon-plus"
-					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px"></span>
+					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px">
 				<span class="counter" style="font-size: 35px;"><fmt:formatNumber
 						value="0" pattern="###,###" /></span>
 			</div>
@@ -112,7 +109,7 @@
 						style="font-size: 20px;color: black;margin: 10px 0 20px 10px;font-weight: bold">推文数：</div>
 				</div>
 				<span class="glyphicon glyphicon-refresh "
-					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px"></span>
+					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px">
 				<span class="counter" style="font-size: 35px;"><fmt:formatNumber
 						value="0" pattern="###,###" /></span>
 			</div>
@@ -123,7 +120,7 @@
 						style="font-size: 20px;color: black;margin: 10px 0 20px 10px;font-weight: bold">总人数：</div>
 				</div>
 				<span class="glyphicon glyphicon-user"
-					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px"></span>
+					  style="font-size: 30px; color: white;margin-left: 30px;margin-top: 20px">
 				<span class="counter" style="font-size: 35px;"><fmt:formatNumber
 						value="0" pattern="###,###" /></span>
 			</div>

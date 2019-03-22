@@ -8,6 +8,7 @@ import cn.yonyong.mytwitter.pojo.Concern;
 import cn.yonyong.mytwitter.pojo.Users;
 import cn.yonyong.mytwitter.pojo.Usersall;
 import cn.yonyong.mytwitter.pojo.Usersinfo;
+import cn.yonyong.mytwitter.util.Md5Util;
 import cn.yonyong.mytwitter.util.Times;
 import cn.yonyong.mytwitter.util.Upload;
 import net.sf.json.JSONArray;
@@ -551,6 +552,7 @@ public class UserServlet extends HttpServlet {
 		String name = (String) session.getAttribute("name");
 		String uname = (String) session.getAttribute("uname");
 		String pwd = (String) session.getAttribute("pwd");
+		pwd = Md5Util.getMd5(pwd);
 		String aite = request.getParameter("aite");
 		Timestamp utime = Times.getSystemTime();
 
@@ -616,7 +618,6 @@ public class UserServlet extends HttpServlet {
 		String uname = request.getParameter("uname");
 		String pwd = request.getParameter("pwd");
 		String order = request.getParameter("order");
-//		pwd = Md5Util.getMd5(pwd);
 		request.setAttribute("name", name);
 		request.setAttribute("uname", uname);
 		request.setAttribute("pwd", pwd);
@@ -643,7 +644,7 @@ public class UserServlet extends HttpServlet {
 			request.getRequestDispatcher("login.jsp?display=show").forward(request, response);
 			return;
 		}
-//		password = Md5Util.getMd5(password);
+		password = Md5Util.getMd5(password);
 		Users user = usersDao.checkLogin(username, password);
 		if (user == null) {
 			request.setAttribute("display", "show");
@@ -651,23 +652,29 @@ public class UserServlet extends HttpServlet {
 			return;
 		}
 
+		//如果用户已被停封
 		if (user.getUstate() == 0) {
 			request.setAttribute("display", "stop");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			return;
 		}
+
+		//如果账号已在其他地方登录，将其强行退掉
 		Usersinfo info = usersinfoDao.getInfos(user.getUid());
 		ServletContext application = request.getSession().getServletContext();
-		HttpSession oldSession = (HttpSession) application.getAttribute(user.getUname());
+		HttpSession oldSession = (HttpSession) application.getAttribute(user.getUname());	//如果有则获取当前登陆用户的session，即代表在其他地方正在登陆
 
 		if (oldSession != null) {
-			oldSession.invalidate();
+			oldSession.invalidate();	//删除该session相关的所有session
 		}
 		HttpSession session = request.getSession();
 		session.setAttribute("user", user);
 		session.setAttribute("info", info);
 
+		//在application里重新添加该用户的session
 		application.setAttribute(user.getUname(), session);
+
+		//刷新当前在线人数
 		Integer onlineNum = (Integer) application.getAttribute("onlineNum");
 		if (onlineNum == null) {
 			onlineNum = new Integer(1);
@@ -675,8 +682,8 @@ public class UserServlet extends HttpServlet {
 			int count = onlineNum.intValue();
 			onlineNum = count + 1;
 		}
-
 		application.setAttribute("onlineNum", onlineNum);
+
 		request.getRequestDispatcher("signin.do?method=online").forward(request, response);
 		// response.sendRedirect("main.jsp");
 	}

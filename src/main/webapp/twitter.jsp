@@ -94,7 +94,7 @@
 		</div>
 		<div id="rigest">
 			<div class="newcomer" style="font-weight: bold;color:black;">
-				新来Twitter？<span style="color: #666;font-weight: bold">注册</span>
+				新来MyTwitter？<span style="color: #666;font-weight: bold">注册</span>
 			</div>
 			<form action="user.do?method=register&order=first" method="post">
 				<input class="txt" type="text" placeholder="姓名"
@@ -106,7 +106,7 @@
 				<button id="signup" class="btn"
 					style="width: 100px;border-radius:5px;margin-left: 191px;  margin-top:5px;  background-color: rgba(29, 161, 241, 1.00);
 				border-color: rgba(0,0,0,1.00);color: white ;font-weight: bold">
-					注册Twitter</button>
+					注册MyTwitter</button>
 
 			</form>
 		</div>
